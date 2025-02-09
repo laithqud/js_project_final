@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forget Password</title>
+    <link rel="stylesheet" href="../css/forget.css">
+</head>
+<body>
+    
+    <div class="top"></div>
+    <div class="bottom"></div>
+        
+    <div class="container">
+        <h2>Forgot Password?</h2>
+        <p>Enter your Email to Reset your Password</p>
+        <input type="email" id="email" placeholder="Email...">
+        <button id="next" onclick="showPasswordInput()">Next</button>
+        
+        <div id="npassword" class="hidden">
+            <input type="password" id="new-password" placeholder="Enter New Password...">
+            <button id="rest" onclick="resetPassword()">Reset Password</button>
+        </div>
+        
+        <p><a href="login.html"> < Back to Sign in</a></p>
+    </div>
+    <script src="../javascript/forget.js"></script>
+</body>
+</html>

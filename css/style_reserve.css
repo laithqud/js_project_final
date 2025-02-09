@@ -1,0 +1,193 @@
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    scroll-behavior: smooth;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+}
+footer{
+    background-color: black;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.h2Design, .logobg, .btnhomebg{
+    backdrop-filter: blur(10px);
+    width: fit-content;
+}
+#book-div {
+    bottom: 100px;
+    left: 10%;
+    height: 115px;
+    width: 80%;
+    box-shadow: 5px 10px 18px #888888;
+    border-radius: 20px;
+}
+#button1{
+    /* box-shadow: 5px 10px 18px #888888; */
+    background-color: #92CCCB; 
+    height: 50px; 
+    width: 130px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+#container {
+    position: relative;
+}
+.input{
+    background-color: #92CCCB;
+    height: 50px; 
+    width: 165px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+/* .more-info-div{
+    background-color: #E4F9F8;
+    width: 98%;
+    margin: 0 auto;
+} */
+
+.roomprev{
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+@media (max-width: 790px) {
+    .input{
+        width: 100px;
+    }
+    #button1{
+        width: 150px;
+    }
+    .roomprev{
+        width: 200px;
+        height: 150px;
+    }
+}
+@media (max-width: 640px) {
+   
+    #book-div{
+        flex-wrap: wrap;
+        height: 250px;
+    }
+    .input{
+        width: 150px;
+    }
+    .roomprev{
+        width: 150px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 450px) {
+    .input{
+        width: 90px;
+    }
+    .roomprev{
+        width: 100px;
+        height: 50px;
+    }
+}
+
+@media(max-width:991px){
+    html{
+        font-size: 55%;
+    }
+    .header{
+        padding: 2rem;
+    }
+    section{
+        padding: 2rem;
+    }
+    .book .row-css .container .slide-container{
+        max-width: 100rem;
+        justify-content: center;
+    }
+}
+
+@media(max-width:768px){
+    #menu-btn-css{
+        display: inline-block;
+    }
+    .header .navbar{
+        position: fixed;
+        top: 0; left: -105%;
+        width: 30rem;
+        background: #fff;
+        height: 100%;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        z-index: 1200;
+    }
+    .header .navbar.active{
+        left: 0;
+        box-shadow: 0 0 0 100vw rgba(0,0,0,0.8);
+    }
+    .header .navbar #close-navbar{
+        display: block;
+    }
+    .header .navbar a{
+        display: block;
+        margin: 1rem 0;
+        text-align: center;
+        font-size: 3rem;
+    }
+}
+
+@media(max-width:450px){
+    html{
+        font-size: 50%;
+    }
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reservation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style_reserve.css">
+    <script src="https://kit.fontawesome.com/061a66bb6d.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="bg-secondary bg-opacity-25">
+    <div id="container" class="container-fluid d-flex flex-column">
+        <div id="img-div" class="container-fluid rounded-top"
+            style="background-image: url('../images/dobai.jpg'); background-size: cover; height: 500px; object-fit: contain;">
+            <div class="container d-flex flex-column gap-5">
+                <div class="container d-flex justify-content-between align-items-center pt-4">
+                    <a class="logobg" href="../index.html" style="text-decoration: none;"><img src="../images/logo2.png"
+                            style="width: 100px; height: 50px;" alt=""></a>
+                    <a href="../index.html" style="text-decoration: none;"
+                        class="text-white btn btn-outline-success border-2 btnhomebg">Home</a>
+                </div>
+                <center>
+                    <h2 class="text-light rounded fs-1 d-flex justify-content-center h2Design">Fill your Information to
+                        Reserve your Room</h2>
+                </center>
+            </div>
+        </div>
+        <div id="info-div" class="container-fluid d-flex flex-column justify-content-center "
+            style="background-color: #E4F9F8;">
+            <div id="book-div" class="container bg-light d-flex justify-content-evenly align-items-center gap-4 p-2 ">
+                <div>
+                    <p class="fs-6 fw-light pb-2">Room no.</p>
+                    <select name="room" id="room" class="form-select input">
+                        <option selected> </option>
+                        <option>Room 1</option>
+                        <option>Room 2</option>
+                        <option>Room 3</option>
+                        <option>Room 4</option>
+                        <option>Room 5</option>
+                        <option>Room 6</option>
+                        <option>Room 7</option>
+                        <option>Room 8</option>
+                        <option>Room 9</option>
+                        <option>Room 10</option>
+                        <option>Room 11</option>
+                        <option>Room 12</option>
+                    </select>
+                </div>
+                <div>
+                    <p class="fs-6 fw-light pb-2">Guests no.</p>
+                    <input name="guests" id="guests" type="number" class="border rounded ps-2 input">
+                </div>
+                <div>
+                    <p class="fs-6 fw-light pb-2">Arrivel</p>
+                    <input name="from" id="from" type="date" class="border rounded ps-2 input">
+                </div>
+                <div>
+                    <p class="fs-6 fw-light pb-2">Leaving</p>
+                    <input name="to" id="to" type="date" class="border rounded ps-2 input">
+                </div>
+                <a id="button1" onclick="saveData()"
+                    class="btn reservebtn d-flex justify-content-center align-items-center mt-4">Reserve</a>
+            </div>
+            <div class="more-info-div rounded-bottom  d-md-flex flex-md-row flex-column">
+                <div>
+                    <h1 class="m-5 fw-bold fs-4">
+                        About The Petra Sella Hotel:
+                    </h1>
+                    <p class=" px-5">
+                        Is a newly renovated and well furnished four stars hotel, finishing 5 stars, located in Wadi Mousa City. The hotel is about 3 minutes walk to the city center and 900 meters away or 15 minutes walk to the entrance of the famous Petra Archaeological Park.
+                        <br><br><br>
+                        Our hotel, located in the heart of Wadi Mousa City, has been newly renovated and exquisitely furnished to provide an exceptional experience for our guests. As a four-star establishment nearing five-star standards, we offer comfort and luxury at every turn.
+                        <br><br><br>
+                        Conveniently situated just a 3-minute walk from the city center, our hotel is ideally positioned for guests to explore the vibrant local area. Additionally, we are only 900 meters away, or a leisurely 15-minute walk, from the entrance of the renowned Petra Archaeological Park.
+                        <br><br><br>
+                        Our prime location, combined with our commitment to outstanding service and top-notch amenities, ensures that your stay with us will be both memorable and comfortable. Whether you're here for a relaxing getaway or an adventurous journey through history, our hotel is the perfect starting point for your explorations.
+                        <br><br><br>
+                    </p>
+                </div>
+                <div class="d-md-block d-none ">
+                    <div id="carouselExampleIndicators" class="carousel slide">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner mt-5">
+                            <div class="carousel-item active">
+                                <img src="../images/petra prev.png" class="d-block roomprev" alt="room">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../images/petra prev2.png" class="d-block roomprev" alt="room">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../images/petra prev3.png" class="d-block roomprev" alt="room">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    <ul class="mt-3">
+                        <li class="mt-3">
+                            <i class="fa-solid fa-wifi" style="color: #000000;"></i> Free Wifi
+                        </li>
+                        <li class="mt-3">
+                            <i class="fa-solid fa-temperature-half" style="color: #000000;"></i> Air Conditioning
+                        </li>
+                        <li class="mt-3">
+                            <i class="fa-solid fa-vault" style="color: #000000;"></i> Safe in Room
+                        </li>
+                        <li class="mt-3">
+                            <i class="fa-solid fa-hot-tub-person"></i> Jacuzzi
+                        </li>
+                        <li class="mt-3">
+                            <i class="fa-solid fa-bell-concierge"></i> Room Service
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../javascript/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</html>
